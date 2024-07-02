@@ -22,16 +22,14 @@ export const MarketBar = ({ market }: { market: string }) => {
               >
                 ${ticker?.lastPrice}
               </p>
-              <p className="font-medium text-sm text-sm tabular-nums">
+              <p className="font-medium text-sm  tabular-nums">
                 ${ticker?.lastPrice}
               </p>
             </div>
             <div className="flex flex-col">
-              <p className={`font-medium text-xs text-slate-400 text-sm`}>
-                24H Change
-              </p>
+              <p className={`font-medium text-slate-400 text-sm`}>24H Change</p>
               <p
-                className={` text-sm font-medium tabular-nums leading-5 text-sm text-greenText ${
+                className={` text-sm font-medium tabular-nums leading-5  text-greenText ${
                   Number(ticker?.priceChange) > 0
                     ? "text-green-500"
                     : "text-red-500"
@@ -43,18 +41,14 @@ export const MarketBar = ({ market }: { market: string }) => {
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="font-medium text-xs text-slate-400 text-sm">
-                24H High
-              </p>
-              <p className="text-sm font-medium tabular-nums leading-5 text-sm ">
+              <p className="font-medium text-xs text-slate-400">24H High</p>
+              <p className="font-medium tabular-nums leading-5 text-sm ">
                 {ticker?.high}
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="font-medium text-xs text-slate-400 text-sm">
-                24H Low
-              </p>
-              <p className="text-sm font-medium tabular-nums leading-5 text-sm ">
+              <p className="font-medium text-xs text-slate-400 ">24H Low</p>
+              <p className=" font-medium tabular-nums leading-5 text-sm ">
                 {ticker?.low}
               </p>
             </div>
@@ -64,10 +58,10 @@ export const MarketBar = ({ market }: { market: string }) => {
               data-rac=""
             >
               <div className="flex flex-col">
-                <p className="font-medium text-xs text-slate-400 text-sm">
+                <p className="font-medium text-xs text-slate-400 ">
                   24H Volume
                 </p>
-                <p className="mt-1 text-sm font-medium tabular-nums leading-5 text-sm ">
+                <p className="mt-1  font-medium tabular-nums leading-5 text-sm ">
                   {ticker?.volume}
                 </p>
               </div>

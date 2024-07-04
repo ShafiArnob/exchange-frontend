@@ -1,4 +1,5 @@
 "use client";
+import { Depth } from "@/app/components/dept/Dept";
 import { MarketBar } from "@/app/components/MarketBar";
 import { TradeView } from "@/app/components/TradeView";
 import { useParams } from "next/navigation";
@@ -18,7 +19,7 @@ const Page = (props: Props) => {
           </div>
           <div className="w-[1px] flex-col border-slate-800 border-l"></div>
           <div className="flex flex-col w-[250px] overflow-hidden">
-            <p>Depth</p>
+            <Depth market={market as string} />
           </div>
         </div>
       </div>

@@ -35,3 +35,12 @@ export async function getKlines(
   const data: KLine[] = response.data;
   return data.sort((x, y) => (Number(x.end) < Number(y.end) ? -1 : 1));
 }
+
+export async function getDepth(market: string): Promise<Depth> {
+  const response = await axios.get(`${BASE_URL}/depth?symbol=${market}`);
+  return response.data;
+}
+export async function getTrades(market: string): Promise<Trade[]> {
+  const response = await axios.get(`${BASE_URL}/trades?symbol=${market}`);
+  return response.data;
+}
